@@ -1,0 +1,9 @@
+>(interp-ce-ext
+  '((lambda (x) ((lambda (y) y) 2)) ((lambda (x) (x x)) (lambda (x) (x x)))))
+> (interp-ce-ext '(lambda (x) ((lambda (y) y) 2)) '#hash())
+< '(closure (lambda (x) ((lambda (y) y) 2)) #hash())
+> (interp-ce-ext '((lambda (x) (x x)) (lambda (x) (x x))) '#hash())
+> >(interp-ce-ext '(lambda (x) (x x)) '#hash())
+< <'(closure (lambda (x) (x x)) #hash())
+> >(interp-ce-ext '(lambda (x) (x x)) '#hash())
+< <'(closure (lambda (x) (x x)) #hash())

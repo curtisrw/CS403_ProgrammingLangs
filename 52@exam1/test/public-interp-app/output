@@ -1,0 +1,5 @@
+>(interp-ce-ext '((lambda (x) (((lambda (x) (lambda (y) x)) 3) 5)) 4))
+> (interp-ce-ext '(lambda (x) (((lambda (x) (lambda (y) x)) 3) 5)) '#hash())
+< '(closure (lambda (x) (((lambda (x) (lambda (y) x)) 3) 5)) #hash())
+> (interp-ce-ext 4 '#hash())
+< 4
